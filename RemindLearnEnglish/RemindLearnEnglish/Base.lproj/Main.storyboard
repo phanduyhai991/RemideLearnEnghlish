@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="RemindLearnEnglish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="7gJ-MC-Wa3">
+                                <rect key="frame" x="67" y="358.5" width="280" height="179"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="bYg-pf-dNp"/>
+                                    <constraint firstAttribute="width" secondItem="7gJ-MC-Wa3" secondAttribute="height" multiplier="439:280" id="gdA-l8-eqd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you want a high salary, you must learn English" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUi-xN-sEL">
+                                <rect key="frame" x="20" y="215.5" width="374" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.5450980392" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7gJ-MC-Wa3" firstAttribute="top" secondItem="HUi-xN-sEL" secondAttribute="bottom" constant="100" id="1mx-Lr-x9U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HUi-xN-sEL" secondAttribute="trailing" constant="20" id="WDq-jW-bIs"/>
+                            <constraint firstItem="HUi-xN-sEL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="blj-SO-jpZ"/>
+                            <constraint firstItem="7gJ-MC-Wa3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mzi-S3-XsJ"/>
+                            <constraint firstItem="7gJ-MC-Wa3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nhe-oc-YUN"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sloganLabel" destination="HUi-xN-sEL" id="aj3-gH-ztH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="UR2-gW-YX7">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="178.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="UR2-gW-YX7" secondAttribute="height" multiplier="439:280" id="AwR-79-Anf"/>
+                        <constraint firstAttribute="width" constant="280" id="WFg-ZV-dRU"/>
+                    </constraints>
+                </imageView>
             </objects>
+            <point key="canvasLocation" x="107" y="87"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="ID3-Jt-vsm">
+            <objects>
+                <tabBarController storyboardIdentifier="MainTabBarController" id="OgP-Ef-HMa" customClass="MainTabBarController" customModule="RemindLearnEnglish" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hdh-L0-l9n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gpk-rn-wTL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="96"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splash" width="439" height="280"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  RemindLearnEnglish
+
+  Created by HaiPD1 on 10/24/22.
+  
+*/
+"slogan" = "If you want a high salary, you must learn English";
+
+//Tabbar
+"Home" = "Home";
+"Setting" = "Setting";
+"Movie" = "Movie";
+"Chat" = "Chat";
+
+
+//Home
+"Vocabulary" = "Vocabulary";
+"Listening" = "Listening";
+"Speaking" = "Speaking";
+"Grammar" = "Grammar";
+
